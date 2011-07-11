@@ -46,14 +46,6 @@
       swatch = $("<div class='color_swatch'>&nbsp;</div>")
       swatch.css("background-color", "#" + this);
       swatch.bind("click", function(e){ changeColor($(this).css("background-color")) });
-      swatch.bind("mouseover", function(e){ 
-        $(this).css("border-color", "#598FEF"); 
-        $("input#color_value").val(toHex($(this).css("background-color")));    
-        }); 
-      swatch.bind("mouseout", function(e){ 
-        $(this).css("border-color", "#000");
-        $("input#color_value").val(toHex($(selectorOwner).css("background-color")));
-        });
       
      swatch.appendTo(selector);
      });
